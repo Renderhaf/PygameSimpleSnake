@@ -23,7 +23,9 @@ snakeLocations = []
 xspeed = 1
 yspeed = 0
 snakeLocation = [0,0]
-IS_FADE = False
+
+#Makes the snake fade (And be cooler)
+IS_FADE = True
 
 #Defining colors
 BACKGROUND = (0,0,0)
@@ -51,16 +53,16 @@ workPerTicks = 100
 def keyDown(key):
     x = 0
     y = 0
-    if key == pygame.K_w:
+    if key == pygame.K_w or key == pygame.K_UP:
         x = 0
         y = -1
-    if key == pygame.K_s:
+    if key == pygame.K_s or key == pygame.K_DOWN:
         x = 0
         y = 1
-    if key == pygame.K_a:
+    if key == pygame.K_a or key == pygame.K_LEFT:
         x = -1
         y = 0
-    if key == pygame.K_d:
+    if key == pygame.K_d or key == pygame.K_RIGHT:
         x = 1
         y = 0
     return [x,y]
